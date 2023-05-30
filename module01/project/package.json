@@ -1,18 +1,20 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "",
+  "description": "As a system user",
   "main": "index.js",
-  "scripts": {
-    "test": ""
+  "directories": {
+    "test": "test"
   },
-  "engines": {
-    "node": "18"
-  },
-  "keywords": [],
-  "author": "Guilherme Behs",
-  "license": "ISC",
   "dependencies": {
     "faker": "^5.1.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "",
+    "seed": "node ./seed/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
