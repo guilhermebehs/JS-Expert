@@ -10,12 +10,14 @@
     "chai": "^4.3.7",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.4"
+    "sinon": "^9.2.4",
+    "supertest": "^6.3.3"
   },
   "scripts": {
     "seed": "node ./seed/",
-    "test:dev": "npx mocha -w --parallel **/**/*.test.js",
-    "test": "npx mocha --parallel **/**/*.test.js",
+    "test:e2e": "npm run seed && npx mocha --timeout 10000 **/e2e/*.test.js",
+    "test:dev": "npx mocha -w --parallel **/unitTests/*.test.js",
+    "test": "npx mocha --parallel **/unitTests/*.test.js",
     "test:cov": "npx nyc mocha **/**/*.test.js"
   },
   "keywords": [],
