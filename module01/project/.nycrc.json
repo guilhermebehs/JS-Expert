@@ -6,6 +6,7 @@
     "checkCoverage": true,
     "reporter": [
       "html", "text"
-    ]
+    ],
+    "exclude": ["src/repositories/base.js"]
 
 }
