@@ -1,0 +1,18 @@
+
+1 - transformar em json
+
+regex: ^(\w+\s\w+),(\d{11}),(\d{4}-\d{2}-\d{2})$
+replace: {name:"$1", document: "$2", birthDate: "$3"},
+
+Guilherme Behs,02853279090,1993-03-21
+Karol Guerini,02853279090,1992-01-02
+
+
+
+2 - converter para link de html 
+
+regex: ^.*\[(.*)\]\((.*)\).*$
+replace: <a href="$1"> $2</a>
+
+Ola, eu sou o Guilherme, me siga em [https://www.linkedin.com/feed/](Linkedin) e 
+[http://www.guilhermebehs.com.br](Blog Pessoal) para mais novidades.
