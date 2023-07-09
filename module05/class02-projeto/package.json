@@ -1,0 +1,23 @@
+{
+  "name": "class02-projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npx mocha ./test/**/*.test.js",
+    "test:cov": "npx nyc mocha -r reify ./test/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "4.2",
+    "mocha": "2.1",
+    "nyc": "15.1",
+    "pdf-parse": "^1.1.1",
+    "safe-regex": "^2.1.1"
+  }
+}
