@@ -97,6 +97,41 @@ describe('TextProcessorFluentApi', ()=>{
                 .build()
     
                 expect(result).to.be.deep.eq(expected)
-            })    
+            })
+        })     
+            
+            describe('createPerson', ()=>{
+                it('should create person', ()=>{
+        
+                    const data = [
+                        [
+                            'Xuxa da Silva', 
+                            'brasileira', 
+                            'casada', 
+                            'CPF 235.743.420-12', 
+                            'residente e \ndomiciliada a Rua dos bobos',
+                            'zero', 
+                            'bairro Alphaville', 
+                            'São Paulo.'
+                            ],
+                    ]
+    
+                    const expected = [{
+                        nome: 'Xuxa da Silva',
+                        nacionalidade: 'Brasileira',
+                        estadoCivil: 'Casada',
+                        documento: '23574342012',
+                        rua: 'Rua dos bobos',
+                        numero: 'zero',
+                        bairro: 'Alphaville',
+                        estado: 'São Paulo',
+                    }]
+        
+                    const result = new TextProcessorFluentApi(data)
+                    .createPerson()
+                    .build()
+        
+                    expect(result).to.be.deep.eq(expected)
+                })   
     })
 })

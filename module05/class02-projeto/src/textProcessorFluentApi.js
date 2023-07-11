@@ -1,3 +1,4 @@
+const Person = require('./person')
 const {evaluateRegex} = require('./util')
 
 class TextProcessorFluentApi {
@@ -39,6 +40,11 @@ class TextProcessorFluentApi {
     removeSpaces(){
         const exp = evaluateRegex(/^\s|\s$/g) 
         this.#content = this.#content.map(data => data.map(line=> line.replace(exp, '')))
+        return this
+    }
+
+    createPerson(){
+        this.#content = this.#content.map(data => new Person(data))
         return this
     }
 
